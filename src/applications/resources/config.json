@@ -1,0 +1,24 @@
+{
+    "local": {
+        "AWS_REGION" : "us-east-1",
+        "USER_BD" : "postgres",
+        "PASS_BD": "1234",
+        "NAME_BD": "postgres",
+        "PORT_BD": 5432,
+        "HOST_BD": "localhost",
+        "SQL_SELECT_TBL_MANUSCRITO_ENCONTRADO" : "select COUNT(*) from public.manuscrito where state = 'true'",
+        "SQL_SELECT_TBL_MANUSCRITO_NOENCONTRADO" : "select COUNT(*) from public.manuscrito where state = 'false'",
+        "SQL_INSERT_TBL_MANUSCRITO": "INSERT INTO public.manuscrito (manuscript, state) VALUES ($1, $2)"
+    },
+    "cloud": {
+        "USER_BD" : "postgres",
+        "PASS_BD": "123456789Pa***",
+        "NAME_BD": "postgres",
+        "PORT_BD": 5432,
+        "HOST_BD": "databasepublic.ceze8aieyq6u.us-east-1.rds.amazonaws.com",
+        "SQL_SELECT_TBL_MANUSCRITO_ENCONTRADO" : "select COUNT(*) from public.manuscrito where state = 'true'",
+        "SQL_SELECT_TBL_MANUSCRITO_NOENCONTRADO" : "select COUNT(*) from public.manuscrito where state = 'false'",
+        "SQL_INSERT_TBL_MANUSCRITO": "INSERT INTO public.manuscrito (manuscript, state) VALUES ($1, $2)"
+
+    }
+}

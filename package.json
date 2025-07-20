@@ -1,0 +1,22 @@
+{
+    "name": "manuscrito",
+    "version": "1.0.0",
+    "main": "handler.js",
+    "keywords": [],
+    "author": "Pablo Aguirre",
+    "license": "ISC",
+    "dependencies": {
+        "node-lambda": "^1.3.0",
+        "pg": "^8.11.5"
+    },
+    "engines": {
+        "node": "^18"
+    },
+    "overrides": {
+        "semver": "7.5.2"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "description": ""
+}
