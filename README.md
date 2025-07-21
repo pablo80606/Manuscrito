@@ -1,14 +1,16 @@
 # Manuscrito
 
+Aplicacion que permite analizar antiguos manuscritos y determina si contiene pistas sobre la ubicacion de artefactos que otorgan habilidadles maginas a sus portadores.
+
 ## Instrucciones
 
 ### 1 - Lambda
 
-Crear en la consola de AWS una Lambda con lenguaje de programacion Node version 18, la Lambda debe tener configurado URL Lambda Function y permisos sobre la instancia de base de datos, una vez creada, adjuntar el archivo .zip en la Lambda AWS. 
+La aplicacion se desplego en una Lambda de AWS en el lenguaje de programacion Node version 18, la Lambda tiene configurado URL Lambda Function y permisos sobre la instancia de base de datos.
 
 ### 2 - Base de Datos
 
-Crear base de datos en AWS, en el servicio de RDS Postgresql y ejecutar el siguiente script:
+Para poder analizar cuales artefactos fueron encontrados y no encontrados se creo una base datos relacional con el Motor PostgreSQL, con la siguiente configuracion. donde cada manuscrito sera unico.
 
     CREATE TABLE public.manuscrito (
         manuscript varchar NULL,
@@ -17,11 +19,11 @@ Crear base de datos en AWS, en el servicio de RDS Postgresql y ejecutar el sigui
     );
     CREATE INDEX manuscrito_state_idx ON public.manuscrito USING btree (state);
 
-Configurar en el archivo de la Lambda src/resources/config.json los parametros para la conexion de la RDS
+En el archivo de la Lambda src/resources/config.json estan los parametros para la conexion de la RDS segun el ambiente
 
 ### 3 - Consumir servicio Clue
 
-Para consumir el servicio de Clue y revisar pistas de los artefactos ejecutar el siguiente script, tener presente que el script es sensible con las Mayusculas y Minusculas.
+Para consumir el servicio de Clue y revisar pistas de los artefactos ejecutar el siguiente script, tener presente que el script es sensible con las Mayusculas y Minusculas. Ademas, puedes agregar mas si lo deseas y en cualquier dimension de letras.
 
     curl --location 'https://vhyrh42xx63bmjqxrjdf2tm6wa0uxmge.lambda-url.us-east-1.on.aws/clue' \
     --header 'Content-Type: application/json' \
