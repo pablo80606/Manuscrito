@@ -4,7 +4,7 @@
 
 ### 1 - Lambda
 
-Crear en la consola de AWS una Lambda con lenguaje de programacion Node version 18, la Lambda debe tener configurado URL Lambda Function y permisos sobre la instancia de base de datos.
+Crear en la consola de AWS una Lambda con lenguaje de programacion Node version 18, la Lambda debe tener configurado URL Lambda Function y permisos sobre la instancia de base de datos, una ves creada, adjuntar el archivo .zip en la lambda. 
 
 ### 2 - Base de Datos
 
@@ -16,6 +16,8 @@ Crear base de datos en AWS, en el servicio de RDS Postgresql y ejecutar el sigui
         CONSTRAINT manuscrito_unique UNIQUE (manuscript)
     );
     CREATE INDEX manuscrito_state_idx ON public.manuscrito USING btree (state);
+
+Configurar en el archivo de la Lambda src/resources/config.json los parametros para la conexion de la RDS
 
 ### 3 - Consumir servicio Clue
 
