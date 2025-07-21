@@ -1,6 +1,6 @@
 # Manuscrito
 
-Aplicacion que permite analizar antiguos manuscritos y determina si contiene pistas sobre la ubicacion de artefactos que otorgan habilidadles maginas a sus portadores.
+Aplicacion que permite analizar antiguos manuscritos y determina si contiene pistas sobre la ubicacion de artefactos que otorgan habilidadles magicas a sus portadores.
 
 ## Instrucciones
 
