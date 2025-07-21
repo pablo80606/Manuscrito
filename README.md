@@ -4,7 +4,7 @@
 
 ### 1 - Lambda
 
-Crear en la consola de AWS una Lambda con lenguaje de programacion Node version 18, la Lambda debe tener configurado URL Lambda Function y permisos sobre la instancia de base de datos, una ves creada, adjuntar el archivo .zip en la lambda. 
+Crear en la consola de AWS una Lambda con lenguaje de programacion Node version 18, la Lambda debe tener configurado URL Lambda Function y permisos sobre la instancia de base de datos, una vez creada, adjuntar el archivo .zip en la Lambda AWS. 
 
 ### 2 - Base de Datos
 
