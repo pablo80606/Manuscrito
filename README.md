@@ -36,7 +36,7 @@ Para consumir el servicio de Clue y revisar pistas de los artefactos ejecutar el
         ]
     }'
 
-### 4 - Consumir servicio Stas
+### 4 - Consumir servicio Stats
 
 Si deseas revisar las estadisticas de las pistas buscadas puedes consumir el siguiente servicio:
 
